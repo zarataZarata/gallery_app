@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Document</title>
+</head>
+
+<body>
+<ul id = list> </ul>
+</body>
+<script type ="text/javascript">
+
+var items = [
+    { name: 'item-1', children: [{ name: 'child-1' }, { name: 'child-6' }] },
+    { name: 'item-2', children: [{ name: 'child-3' }, { name: 'child-7' }] },
+    { name: 'item-3', children: [{ name: 'child-4' }, { name: 'child-8' }] },
+    { name: 'item-4', children: [{ name: 'child-5' }, { name: 'child-9' }] }
+];
+
+function render (items, container_id) {
+  const container = document.querySelector (container_id);
+
+  for (let item of items) {
+    const {name, children} = item;
+
+    const li = document.createElement ('li');
+
+    li.innerHTML = name;
+
+    container.appendChild (li);
+
+    if (children || children.length) {
+      const ul = document.createElement ('ul');
+      li.appendChild (ul);
+
+      for (let child of children) {
+        const li = document.createElement ('li');
+        li.itemHTML = child.name;
+        ul.appendChild(li)
+      }
+    }
+  }
+}
+
+function appendItems(container, name) {
+  const li = document.createElement ('li');
+  li.innerHTML = name;
+  container.appendChild (li);
+}
+
+render ();
+
+</script>
+</html> 
+
+
+
+

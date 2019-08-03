@@ -1,0 +1,30 @@
+body {
+    background: #cccccc;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#navigation {
+    width: 100%;
+    margin: 15px 0;
+    background: #0c7981;
+    padding: 15px;
+}
+
+#navigation span {
+    background: #0b3f42;
+    padding: 2px 10px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+#navigation span:hover {
+    background: #87e4e9;
+}
+
+#navigation input {
+    width: 50px;
+    height: 18px;
+}
